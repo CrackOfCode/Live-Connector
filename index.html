@@ -1,49 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WavyWinterXP - TikTok & Stream</title>
+  <title>WavyWinterXP Stream Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>WavyWinterXP</h1>
-      <p>Streaming the wave 🌊 | Gaming | Vibes</p>
-    </header>
+    <h1>🎥 WavyWinterXP's Stream Hub</h1>
 
-    <section class="live-status">
-      <span class="live-dot"></span>
-      <strong>LIVE NOW</strong> on TikTok!
-    </section>
-
-    <section class="profile-card">
-      <img src="https://avatars.dicebear.com/api/bottts/wavywinterxp.svg" alt="Profile" class="profile-pic"/>
-      <h2>@wavywinterxp</h2>
-      <p>Follow for epic streams & clips!</p>
-      <a href="https://www.tiktok.com/@wavywinterxp" target="_blank" class="btn">Visit TikTok</a>
-    </section>
-
-    <section class="latest-video">
-      <h3>🎬 Latest TikTok Video</h3>
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wavywinterxp/video/7342979054030894337" data-video-id="7342979054030894337" style="max-width: 400px;min-width: 325px;">
-        <section>Loading latest video...</section>
+    <!-- TikTok Embed -->
+    <div class="tiktok-embed-wrapper">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wavywinterxp" data-unique-id="wavywinterxp" data-embed-type="creator" style="max-width: 400px;min-width: 300px;">
+        <section>Loading TikTok...</section>
       </blockquote>
-    </section>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
 
-    <section class="tiktok-feed">
-      <h3>📲 More from WavyWinterXP</h3>
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wavywinterxp" data-unique-id="wavywinterxp" style="max-width: 400px;min-width: 325px;">
-        <section>Loading feed...</section>
-      </blockquote> 
-    </section>
-
-    <footer>
-      <p>Made with ❤️ by a fan. Follow @wavywinterxp everywhere.</p>
-    </footer>
+    <!-- Comment Wall -->
+    <div class="comments-section">
+      <h2>💬 Comment Wall</h2>
+      <ul id="comments-list"></ul>
+      <input type="text" id="commentInput" placeholder="Type your comment..." />
+      <button onclick="addComment()">Post</button>
+    </div>
+  
+    <!-- Social Links -->
+    <div class="social-links">
+      <h2>🔗 Connect with WavyWinterXP</h2>
+      <a href="https://discord.gg/aE2k4bFWAc" target="_blank" class="social-button discord">Join Discord</a>
+      <a href="https://twitch.tv/wavywinterxp" target="_blank" class="social-button twitch">Watch on Twitch</a>
+    </div>
   </div>
 
-  <script async src="https://www.tiktok.com/embed.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
