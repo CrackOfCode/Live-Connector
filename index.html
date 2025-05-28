@@ -1,37 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WavyWinterXP Stream Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎥 WavyWinterXP's Stream Hub</h1>
+    <h1>TikTok Live Dashboard</h1>
 
-    <!-- TikTok Embed -->
-    <div class="tiktok-embed-wrapper">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wavywinterxp" data-unique-id="wavywinterxp" data-embed-type="creator" style="max-width: 400px;min-width: 300px;">
-        <section>Loading TikTok...</section>
-      </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
+    <div class="username-section">
+      <label for="username">Change TikTok Live Username:</label>
+      <input type="text" id="username" placeholder="Enter username" />
+      <button onclick="changeUsername()">Update</button>
+      <p id="status"></p>
     </div>
 
-    <!-- Comment Wall -->
-    <div class="comments-section">
-      <h2>💬 Comment Wall</h2>
-      <ul id="comments-list"></ul>
-      <input type="text" id="commentInput" placeholder="Type your comment..." />
-      <button onclick="addComment()">Post</button>
+    <div class="user-list">
+      <h2>Previously Used Usernames</h2>
+      <ul id="usernames"></ul>
     </div>
-  
-    <!-- Social Links -->
-    <div class="social-links">
-      <h2>🔗 Connect with WavyWinterXP</h2>
-      <a href="https://discord.gg/aE2k4bFWAc" target="_blank" class="social-button discord">Join Discord</a>
-      <a href="https://twitch.tv/wavywinterxp" target="_blank" class="social-button twitch">Watch on Twitch</a>
+
+    <div class="chat-section">
+      <h2>Live Chat Feed</h2>
+      <div id="chatbox"></div>
     </div>
   </div>
 
