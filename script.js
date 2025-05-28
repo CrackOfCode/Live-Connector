@@ -8,7 +8,7 @@ async function changeUsername() {
   }
 
   try {
-    const res = await fetch('/api/set-username', {
+    const res = await fetch('http://147.185.221.26:62680/api/set-username', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username })
