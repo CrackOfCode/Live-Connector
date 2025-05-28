@@ -8,7 +8,7 @@ async function changeUsername() {
   }
 
   try {
-    const res = await fetch('http://147.185.221.26:62680/api/set-username', {
+    const res = await fetch('https://metal-items.gl.at.ply.gg:62680/api/set-username', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username })
@@ -25,7 +25,7 @@ async function loadUsernames() {
   const list = document.getElementById('usernames');
   list.innerHTML = '';
   try {
-    const res = await fetch('http://147.185.221.26:62680/api/usernames');
+    const res = await fetch('https://metal-items.gl.at.ply.gg:62680/api/usernames');
     const data = await res.json();
     data.usernames.forEach(u => {
       const li = document.createElement('li');
@@ -40,7 +40,7 @@ async function loadUsernames() {
 async function loadChat() {
   const chatbox = document.getElementById('chatbox');
   try {
-    const res = await fetch('http://147.185.221.26:62680/api/chat');
+    const res = await fetch('https://metal-items.gl.at.ply.gg:62680/api/chat');
     const data = await res.json();
     chatbox.innerHTML = '';
     data.chat.forEach(msg => {
